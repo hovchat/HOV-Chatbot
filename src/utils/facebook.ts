@@ -51,6 +51,11 @@ const persistent_menu = [
         payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
       },
       {
+        content_type: 'text',
+        title: 'cả nam và nữ',
+        payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
+      },
+      {
         title: 'kết thúc',
         type: 'postback',
         payload: lang.KEYWORD_END,
