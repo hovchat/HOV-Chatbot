@@ -98,6 +98,11 @@ const quick_buttons_genders: Array<SendQuickReply> = [
     title: 'tìm nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
   },
+  {
+    content_type: 'text',
+    title: 'cả nam và nữ',
+    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
+  },
 ];
 
 const setPersona = async (): Promise<void> => {
