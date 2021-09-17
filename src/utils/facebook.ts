@@ -145,7 +145,7 @@ const setPersona = async (): Promise<void> => {
 
   const payload = {
     name: 'Đối chat',
-    profile_picture_url: config.PERSONA_PROFILE_PICTURE,
+    profile_picture_url: /* config.PERSONA_PROFILE_PICTURE*/ 'https://hovchat.github.io/assets/image/logo.png',
   };
 
   try {
