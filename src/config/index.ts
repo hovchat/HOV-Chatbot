@@ -68,7 +68,7 @@ export default {
   MAINTENANCE: parseEnvBoolean('MAINTENANCE') || false,
 
   // Graph API
-  GRAPH_API: parseEnvString('GRAPH_API') || 'https://graph.facebook.com/v11.0',
+  GRAPH_API: parseEnvString('GRAPH_API') || 'https://graph.facebook.com/v7.0',
 
   // App secret
   APP_SECRET: parseEnvString('APP_SECRET') || '',
@@ -83,14 +83,14 @@ export default {
   MAX_MESSAGE_LENGTH: parseEnvNumber('MAX_MESSAGE_LENGTH') || 2000,
 
   // App name (must be the same on Heroku)
-  APP_NAME: parseEnvString('APP_NAME') || 'hovchat',
+  APP_NAME: parseEnvString('APP_NAME') || 'ptnkchat',
 
   // App display name
-  APP_DISPLAY_NAME: parseEnvString('APP_DISPLAY_NAME') || 'HOV Chatible',
+  APP_DISPLAY_NAME: parseEnvString('APP_DISPLAY_NAME') || 'PTNK Chatible',
 
   // Page persona profile picture
   PERSONA_PROFILE_PICTURE:
-    parseEnvString('PERSONA_PROFILE_PICTURE') || 'https://hovchat.github.io/assets/image/logo.png',
+    parseEnvString('PERSONA_PROFILE_PICTURE') || 'https://ptnkchat.github.io/assets/ptnk_logo.jpeg',
 
   // Heroku API key
   HEROKU_API_KEY: parseEnvString('HEROKU_API_KEY') || '',

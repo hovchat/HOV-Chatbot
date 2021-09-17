@@ -51,11 +51,6 @@ const persistent_menu = [
         payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
       },
       {
-        content_type: 'text',
-        title: 'cả nam và nữ',
-        payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
-      },
-      {
         title: 'kết thúc',
         type: 'postback',
         payload: lang.KEYWORD_END,
@@ -103,11 +98,6 @@ const quick_buttons_genders: Array<SendQuickReply> = [
     title: 'tìm nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
   },
-  {
-    content_type: 'text',
-    title: 'cả nam và nữ',
-    payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
-  },
 ];
 
 const setPersona = async (): Promise<void> => {
@@ -139,13 +129,13 @@ const setPersona = async (): Promise<void> => {
   }
 
   if (setUp) {
-    console.log('setPersona succeed. Use existing persona ID.' + personaID);
+    console.log('setPersona succeed. Use existing persona ID.');
     return;
   }
 
   const payload = {
     name: 'Đối chat',
-    profile_picture_url: /* config.PERSONA_PROFILE_PICTURE*/ 'https://hovchat.github.io/assets/image/logo.png',
+    profile_picture_url: config.PERSONA_PROFILE_PICTURE,
   };
 
   try {
