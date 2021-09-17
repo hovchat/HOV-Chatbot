@@ -139,7 +139,7 @@ const setPersona = async (): Promise<void> => {
   }
 
   if (setUp) {
-    console.log('setPersona succeed. Use existing persona ID.');
+    console.log('setPersona succeed. Use existing persona ID.' + personaID);
     return;
   }
 
