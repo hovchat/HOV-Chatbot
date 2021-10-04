@@ -3,3 +3,4 @@ build
 docs
 .env
 .DS_Store
+.code-workspace
