@@ -153,7 +153,9 @@ const forwardMessage = async (sender: string, receiver: string, data: WebhookMes
         }
         await fb.sendTextMessage(sender, receiver, text, true);
       } else if (type === 'image' || type === 'video' || type === 'audio' || type === 'file') {
-        await fb.sendAttachment(sender, receiver, type, data.attachments[0].payload.url, false, false, true);
+        // await fb.sendAttachment(sender, receiver, type, data.attachments[0].payload.url, false, false, true);
+        await fb.sendTextMessage('', sender, lang.ERR_ATTACHMENT, false); // Disable sending image, video, or any type of attachments
+        return;
       } else {
         await fb.sendTextMessage('', sender, lang.ERR_ATTACHMENT, false);
         return;
@@ -163,7 +165,9 @@ const forwardMessage = async (sender: string, receiver: string, data: WebhookMes
     for (let i = 1; i < data.attachments.length; i++) {
       const type = data.attachments[i].type;
       if (type === 'image' || type === 'video' || type === 'audio' || type === 'file') {
-        await fb.sendAttachment(sender, receiver, type, data.attachments[i].payload.url, false, false, true);
+        // await fb.sendAttachment(sender, receiver, type, data.attachments[i].payload.url, false, false, true);
+        await fb.sendTextMessage('', sender, lang.ERR_ATTACHMENT, false); // Disable sending image, video, or any type of attachments
+        return;
       }
     }
   } else {
@@ -285,7 +289,7 @@ const processEvent = async (event: WebhookMessagingEvent): Promise<void> => {
       // FIX-ME: Only send seen indicator for messages before watermark
       if (event.read) {
         await fb.sendSeenIndicator(sender2);
-      } else if (text.trim().toLowerCase().startsWith('[bot]')) {
+      } else if (text.trim().toLowerCase().startsWith('[hov]')) {
         await fb.sendTextMessage('', sender, lang.ERR_FAKE_MSG, false);
       } else {
         await forwardMessage(sender, sender2, event.message);
