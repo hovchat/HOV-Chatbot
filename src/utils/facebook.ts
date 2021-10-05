@@ -416,7 +416,7 @@ const sendSeenIndicator = async (receiver: string): Promise<void> => {
 const getUserData = async (id: string): Promise<UserProfileResponse> => {
   try {
     const res = await phin({
-      url: u(`/${id}?access_token=${config.PAGE_ACCESS_TOKEN}&fields=name,first_name,last_name,profile_pic,gender`),
+      url: u(`/${id}?access_token=${config.PAGE_ACCESS_TOKEN}&fields=name,first_name,last_name,profile_pic`),
       method: 'GET',
       parse: 'json',
     });
