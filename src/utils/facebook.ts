@@ -31,42 +31,42 @@ const persistent_menu = [
     composer_input_disabled: false,
     call_to_actions: [
       {
-        title: '🐱 meow',
+        title: 'meow',
         type: 'postback',
         payload: lang.KEYWORD_CAT,
       },
       {
-        title: '🐶 gauw',
+        title: 'gauw',
         type: 'postback',
         payload: lang.KEYWORD_DOG,
       },
       {
-        title: '🙆‍♂️ tìm nam',
+        title: 'tìm nam',
         type: 'postback',
         payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE,
       },
       {
-        title: '🙆‍♀️ tìm nữ',
+        title: 'tìm nữ',
         type: 'postback',
         payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
       },
       {
-        title: '👫 cả hai',
+        title: 'cả hai',
         type: 'postback',
         payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
       },
       {
-        title: '💢 kết thúc',
+        title: 'kết thúc',
         type: 'postback',
         payload: lang.KEYWORD_END,
       },
       {
-        title: 'ℹ️ trợ giúp',
+        title: 'trợ giúp',
         type: 'postback',
         payload: lang.KEYWORD_HELP,
       },
       {
-        title: '📝 gửi phản hồi',
+        title: 'gửi phản hồi',
         type: 'web_url',
         url: config.REPORT_LINK,
       },
@@ -77,17 +77,17 @@ const persistent_menu = [
 const quick_buttons_generic: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: '🐱 meow',
+    title: 'meow',
     payload: lang.KEYWORD_CAT,
   },
   {
     content_type: 'text',
-    title: '🐶 gauw',
+    title: 'gauw',
     payload: lang.KEYWORD_DOG,
   },
   {
     content_type: 'text',
-    title: 'ℹ️ trợ giúp',
+    title: 'trợ giúp',
     payload: lang.KEYWORD_HELP,
   },
 ];
@@ -95,17 +95,17 @@ const quick_buttons_generic: Array<SendQuickReply> = [
 const quick_buttons_genders: Array<SendQuickReply> = [
   {
     content_type: 'text',
-    title: '🙆‍♂️ tìm nam',
+    title: 'tìm nam',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_MALE,
   },
   {
     content_type: 'text',
-    title: '🙆‍♀️ tìm nữ',
+    title: 'tìm nữ',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_FEMALE,
   },
   {
     content_type: 'text',
-    title: '👫 cả hai',
+    title: 'cả hai',
     payload: lang.KEYWORD_GENDER + lang.KEYWORD_GENDER_BOTH,
   }
 ];
