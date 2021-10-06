@@ -90,8 +90,8 @@ export default {
 
   // Page persona profile picture
   PERSONA_PROFILE_PICTURE:
-    // parseEnvString('PERSONA_PROFILE_PICTURE') || 'https://hovchat.github.io/assets/image/logo.png',
-    'https://hovchat.github.io/assets/image/logo.png',
+    parseEnvString('PERSONA_PROFILE_PICTURE') || 'https://hovchat.github.io/assets/image/Logo%20Chatbot%20Full.png',
+    // 'https://hovchat.github.io/assets/image/logo.png',
 
   // Heroku API key
   HEROKU_API_KEY: parseEnvString('HEROKU_API_KEY') || '',
